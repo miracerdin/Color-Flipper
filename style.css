@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root{
+    --ff-primary: "Roboto", sans-serif;
+    --spacing : 0.25rem;
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --fixed-width: 620px;
+}
+*,
+::after,
+::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+}
+nav{
+    background-color: white;
+    height: 3rem;
+    display: grid;
+    align-items: center;
+    box-shadow: var(--dark-shadow);
+}
+.nav-center{
+    width: 100vh;
+    max-width:var(--fixed-width) ;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav div ul{
+    display: flex;
+}
+li{
+    margin-left: 10px;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1rem;
+    color:hsl(205, 86%, 17%) ;
+    letter-spacing: 0.25rem;
+    margin-right: 1rem;
+}
+a:hover{
+    color:  hsl(205, 78%, 60%);
+}
+h4{
+    color:  hsl(205, 78%, 60%);
+    font-size: 0.875rem;
+    letter-spacing: var(--spacing);
+    line-height: 1.25;
+    margin-bottom: 0;
+    font-family: var(--ff-primary);
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container{
+    text-align: center;
+}
+main div h2{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.color{
+    color: hsl(205, 78%, 60%);
+}
+.btn{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    padding: 0.375rem 0.75rem;
+    display: inline-block;
+    font-weight: 700;
+    transition: all 0.3s linear;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.btn:hover{
+    color: white;
+    background-color: black;
+}
+.btn-hero {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    margin-top: 50px;
+    
+  }
+@media(max-width:635px){
+    .nav-center {
+        display: grid;
+        background-color: white;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        overflow-block: hidden;
+        height: 3rem;
+    }
+    nav h4{
+        display: flex;
+        right: 10px;
+    }
+}
+@media(max-width:550px){
+    .nav-center{
+        display: grid;
+        grid-template-columns: auto;
+
+    }
+    .nav-center h4{
+        justify-content: center;
+    }
+   
+}
